@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useDeferredValue, useState, useTransition } from 'react';
 import './App.css';
+import { productList } from './components/productList';
 
 function App() {
+
+  const product = productList();
+  // const [isPending, startTransition] = useTransition();
+  const [productValue, setProduct] = useState(product)
+  // const deferredProducts = useDeferredValue(productValue);
+
+  const filterData = (value: string) => {
+    // startTransition(() => { 
+      setProduct(product.filter((ele: string) => ele.includes(value))) 
+    // })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input placeholder='search' onChange={(e) => filterData(e.target.value)} /><br/>
+      {/* {isPending && <span>Loading...</span>} */}
+      {
+        productValue.map((ele: string) =>
+          <div className='product-btn'>
+            {ele}
+          </div>)
+      }
     </div>
   );
 }
