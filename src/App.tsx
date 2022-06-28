@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <input placeholder='search' onChange={(e) => filterData(e.target.value)} /><br/>
+      <input placeholder='search product' onChange={(e) => filterData(e.target.value)} /><br/>
       {/* {isPending && <span>Loading...</span>} */}
       {
         productValue.map((ele: string) =>
