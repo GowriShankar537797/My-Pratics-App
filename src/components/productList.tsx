@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export const productList=()=>{
-    let product=[]
-    for(let i=0;i<=10000;i++){   
-            product.push(`product ${i}`)
+class MyTest extends Component{
+    constructor(props:string){
+        super(props);
+    }  
+    static getDerivedStateFromProps(props:any, state:any) {
+        return {favoritecolor: props.favcol };
+      }
+    render (){
+
+        return(<h1>hello</h1>)
     }
-    return product;
 }
+
+export default MyTest;

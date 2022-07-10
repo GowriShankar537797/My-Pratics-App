@@ -1,15 +1,22 @@
+import { Component } from 'react';
 import './App.css';
-import Routes from './routes';
+import MyTest from './components/productList';
+// import Routes from './routes';
 
-function App() {
+class App extends Component {
+
+  constructor(date:string){
+    super(date)
+  }
 
 
-
-  return (
+  render(){ 
+    return (
     <div className="App">
-     <Routes/>
+<MyTest />
+     {/* <Routes/> */}
     </div>
-  );
+  );}
 }
 
 export default App;

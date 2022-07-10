@@ -1,0 +1,41 @@
+.login-container {
+    background-image: url(../../images/bg-pencil.jpg);
+    height: 100vh;
+    text-align: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+.over-lay{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+}
+
+    .login-form {
+        width: 500px;
+        height: 500px;
+        background-color: unset;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        background-image: url('../../images/mac-iphone.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 20px 40px;
+        border-radius: 12px;
+        color: white;
+        span{
+            font-family: 'Rubik Moonrocks', cursive;
+            color: #219ad5;
+            text-align: center;
+            font-size: 25px;
+            margin: 20px;
+        }
+        .form-label{
+            font-family: 'Rubik Moonrocks', cursive;
+        }
+    }
+}
